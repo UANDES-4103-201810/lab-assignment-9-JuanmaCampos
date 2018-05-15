@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<body>
+
+<h1> CREATE PERSONS </h1>
+
+
+<div>
+<%= form_tag("/persons/create", method: "post") do %>
+	<%= text_field_tag "First Name" %> Name
+	<%= text_field_tag "Last Name" %> Last Name
+	<%= text_field_tag "Description" %> Description
+	<%= radio_button_tag(:type , "director") %> Director
+	<%= radio_button_tag(:type, "actor") %> Actor
+	<%= submit_tag("Submit person") %> 
+	
+<% end %>
+
+</div>
+
+</body>
+</html>
