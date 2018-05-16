@@ -27,8 +27,6 @@
     <%= form.number_field :duration, id: :movie_duration %>
   </div>
 
-  
-
   <div class="field">
     <%= form.label :release_date %>
     <%= form.datetime_select :release_date, id: :movie_release_date %>
@@ -40,7 +38,9 @@
   </div>
 
   <div class="field">
-    <%= select_tag "directors", options_from_collection_for_select(Director.all, "id", "first_name", "last_name") %>
+
+    <%= select_tag "directorselect", options_from_collection_for_select(Director.all, "id", "first_name") %>
+
   </div>
 
   <div class="actions">

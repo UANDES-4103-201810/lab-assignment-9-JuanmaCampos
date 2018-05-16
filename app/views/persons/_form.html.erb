@@ -32,11 +32,10 @@
   </div>
 
   <div class="field">
-    <%= form.radio_button :type, "director" %> Director
-    <%= form.radio_button :type, "actor" %> Actor
+    <%= form.radio_button :typeofperson, "director" %> Director
+    <%= form.radio_button :typeofperson, "actor" %> Actor
 
-  <div class="actions">
-    <%= if actor.prop("checked") = true%>
-	<%= form.submit =%>
+  <div class="field">    
+	<%= submit_tag =%>
   </div>
 <% end %>

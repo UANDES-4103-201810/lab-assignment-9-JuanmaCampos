@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+<head>
+
+</head>
 <body>
 
 <h1> CREATE PERSONS </h1>
@@ -6,13 +9,14 @@
 
 <div>
 <%= form_tag("/persons/create", method: "post") do %>
-	<%= text_field_tag "First Name" %> Name
-	<%= text_field_tag "Last Name" %> Last Name
-	<%= text_field_tag "Description" %> Description
-	<%= radio_button_tag(:type , "director") %> Director
-	<%= radio_button_tag(:type, "actor") %> Actor
-	<%= submit_tag("Submit person") %> 
-	
+	<%= text_field_tag :first_name %> Name
+	<%= text_field_tag :last_name %> Last Name
+	<%= text_field_tag :description %> Description
+	<%= date_field_tag :birth_date %> Select birth date
+	<%= radio_button_tag(:typeofperson , "director") %> Director
+	<%= radio_button_tag(:typeofperson, "actor") %> Actor
+	<%= submit_tag("Submit person") %>
+
 <% end %>
 
 </div>

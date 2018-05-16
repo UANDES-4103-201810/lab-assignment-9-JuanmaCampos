@@ -2,34 +2,7 @@
 
 <body>
 
-<div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :actor_first_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :actor_last_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :birth_date %>
-    <%= form.date_select :birth_date, id: :actor_birth_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description, id: :actor_description %>
-  </div>
-
-  <div class="field">
-    <%= form.radio_button :type, "director" %> Director
-    <%= form.radio_button :type, "actor" %> Actor
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<h1> Index Persons (person creator is in /people/new)</h1>
 </body>
 
 </html>

@@ -5,7 +5,34 @@ class PersonsController < ApplicationController
 	end
 
 	def create
-		@actor = Actor.create
+		if params[:typeofperson] == "actor"
+			@actor = Actor.new(first_name:params[:first_name], last_name:params[:last_name], birth_date:params[:birth_date], description:params[:description])
+
+			    respond_to do |format|
+			      if @actor.save
+				format.html { redirect_to @actor, notice: 'Actor was successfully created.' }
+				format.json { render :show, status: :created, location: @actor }
+			      else
+				format.html { render :new }
+				format.json { render json: @actor.errors, status: :unprocessable_entity }
+			      end
+			    end
+			
+		end
+		else if params[:typeofperson] == "director"
+			@director = Director.new(first_name:params[:first_name], last_name:params[:last_name], birth_date:params[:birth_date], description:params[:description])
+
+			    respond_to do |format|
+			      if @director.save
+				format.html { redirect_to @director, notice: 'Director was successfully created.' }
+				format.json { render :show, status: :created, location: @director }
+			      else
+				format.html { render :new }
+				format.json { render json: @director.errors, status: :unprocessable_entity }
+			      end
+			    end
+		end
+		
 		
 	end
 	

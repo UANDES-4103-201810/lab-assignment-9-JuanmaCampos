@@ -2,5 +2,5 @@ class Movie < ApplicationRecord
 	has_one :address
 	has_one :director
 	has_many :categories
-	has_many :actors
+	has_many :actors, through: :actors_movies
 end
