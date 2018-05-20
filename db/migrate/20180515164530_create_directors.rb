@@ -5,6 +5,7 @@ class CreateDirectors < ActiveRecord::Migration[5.1]
       t.string :last_name
       t.date :birth_date
       t.string :description
+      
 
       t.timestamps
     end

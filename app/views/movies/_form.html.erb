@@ -38,9 +38,8 @@
   </div>
 
   <div class="field">
-
-    <%= select_tag "directorselect", options_from_collection_for_select(Director.all, "id", "first_name") %>
-
+    <%= form.label :director_id %>
+    <%= form.collection_select :director_id, Director.order(:id), :id, :completename, include_blank: true %>
   </div>
 
   <div class="actions">

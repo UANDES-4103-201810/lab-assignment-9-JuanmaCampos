@@ -36,6 +36,10 @@ class PersonsController < ApplicationController
 		
 	end
 	
+	def index
+		@alldirectors = Director.all
+		@allactors = Actor.all
+	
 	def show
 		@actor = Actor.show
 		@director = Director.show	

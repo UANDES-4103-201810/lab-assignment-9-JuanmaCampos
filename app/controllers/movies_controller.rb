@@ -24,7 +24,7 @@ class MoviesController < ApplicationController
   # POST /movies
   # POST /movies.json
   def create
-    @movie = Movie.create(title:params[:title], description:params[:description], duration:params[:duration], director:Director.find(params[:directorselect]), release_date:params[:release_date], address_id:params[:address_id])
+    @movie = Movie.create(movie_params)
 
 
     respond_to do |format|
